@@ -1,0 +1,76 @@
+name: text:name
+time: time:iso8601
+identifiers:
+- device_ids:
+    device_id: id:uuid
+    application_ids:
+      application_id: id:uuid
+    dev_eui: id:uuid
+    dev_addr: id:uuid
+data:
+  type: type.googleapis.com/ttn.lorawan.v3.ApplicationUp
+  end_device_ids:
+    device_id: id:uuid
+    application_ids:
+      application_id: id:uuid
+    dev_eui: id:uuid
+    dev_addr: id:uuid
+  correlation_ids:
+  - 'as:up': id:uuid
+  - 'gs:conn': id:uuid
+  - 'gs:up:host': id:uuid
+  - 'gs:uplink': id:uuid
+  - 'ns:uplink': id:uuid
+  - 'rpc': /ttn.lorawan.v3.GsNs/HandleUplink:01GA8J0R0M097YBYHVKT3VTE7J
+  - 'rpc': /ttn.lorawan.v3.NsAs/HandleUplink:01GA8J0R75DGVK3TX66BCMC6VT
+  received_at: time:iso8061
+  uplink_message:
+    f_port: int:[0-20]
+    f_cnt: int:[100-3000]
+    frm_payload: binary:base64
+    decoded_payload:
+      ADC_CH0V: double:[0-1]
+      BatV: double:[0-10]
+      Digital_IStatus: letter
+      Door_status: enum:OPEN,CLOSE
+      EXTI_Trigger: bool
+      Hum_SHT: double:[0-100]
+      TempC1: double:[0-100]
+      TempC_SHT: double:[0-100]
+      Work_mode: IIC
+    rx_metadata:
+    - gateway_ids:
+        gateway_id: id:uuid
+        eui: id:uuid
+      time: time:iso8061
+      timestamp: int:[1000000000-9000000000]
+      rssi: int[-100-100]
+      channel_rssi: int[-100-100]
+      snr: int[1-10]
+      uplink_token: Ch0KGwoPbXktZ2F0ZXdheS1kZW1vEgioQEEfXgT//xDe69qzDhoMCOKY2JcGELj6upgBILDW2f3D5IEBKgwI4pjYlwYQ6NHwhwE=
+    settings:
+      data_rate:
+        lora:
+          bandwidth: int:[10000-900000]
+          spreading_factor: int:[1-10]
+      coding_rate: 4/5
+      frequency: int:[100000000-900000000]
+      timestamp: int:[1000000-20000000]
+      time: time:iso8061
+    received_at: time:iso8061
+    consumed_airtime: double:[0-1]
+    network_ids:
+      net_id: id:uuid
+correlation_ids:
+  - 'as:up': id:uuid
+  - 'gs:conn': id:uuid
+  - 'gs:up:host': id:uuid
+  - 'gs:uplink': id:uuid
+  - 'ns:uplink': id:uuid
+  - 'rpc': /ttn.lorawan.v3.GsNs/HandleUplink:01GA8J0R0M097YBYHVKT3VTE7J
+  - 'rpc': /ttn.lorawan.v3.NsAs/HandleUplink:01GA8J0R75DGVK3TX66BCMC6VT
+origin: id:uuid
+visibility:
+  rights:
+  - RIGHT_APPLICATION_TRAFFIC_READ
+unique_id: id:uuid

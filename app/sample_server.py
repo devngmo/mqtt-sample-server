@@ -57,6 +57,7 @@ class SampleServer():
 
         tempSensor = Munch(device_id = 'TS01', params=['TEMP'])
         lightSensor = Munch(device_id = 'LS01', params=['BRIGHTNESS'])
+        ttsA = Munch(device_id = 'a', platform='tts')
         devices = [ tempSensor, lightSensor ]
 
         print('Publish counter text message to topic: dev/test')
