@@ -1,0 +1,1368 @@
+{
+    "_id" : "ddtest",
+    "ext_id" : "ddtest",
+    "ports" : [
+        {
+            "id" : "Lamp_status",
+            "name" : "Đèn",
+            "type" : "bool",
+            "unit" : "bool",
+            "enable" : true,
+            "threshold" : null,
+            "value" : "OFF",
+            "valueDisplay" : "Tắt",
+            "state" : "normal",
+            "controllable" : true
+        },
+        {
+            "id" : "Siren_status",
+            "name" : "Còi hú",
+            "type" : "bool",
+            "unit" : "bool",
+            "enable" : true,
+            "threshold" : null,
+            "value" : "OFF",
+            "valueDisplay" : "Tắt",
+            "state" : "normal",
+            "controllable" : true
+        },
+        {
+            "id" : "DH2_status",
+            "name" : "DH2_status",
+            "type" : "bool",
+            "unit" : "bool",
+            "enable" : true,
+            "threshold" : null,
+            "value" : "ON",
+            "valueDisplay" : "Mở",
+            "state" : "normal",
+            "controllable" : true
+        },
+        {
+            "id" : "DH1_status",
+            "name" : "DH1_status",
+            "type" : "bool",
+            "unit" : "bool",
+            "enable" : true,
+            "threshold" : null,
+            "value" : "ON",
+            "valueDisplay" : "Mở",
+            "state" : "normal",
+            "controllable" : true
+        },
+        {
+            "id" : "Fan_status",
+            "name" : "Quạt gió",
+            "type" : "bool",
+            "unit" : "bool",
+            "enable" : true,
+            "threshold" : null,
+            "value" : "OFF",
+            "valueDisplay" : "Tắt",
+            "state" : "normal",
+            "controllable" : true
+        },
+        {
+            "id" : "Current_AC3P1",
+            "name" : "Dòng điện 3 pha Điện lưới",
+            "type" : "number",
+            "unit" : "ampe",
+            "enable" : true,
+            "threshold" : {
+                "max" : null,
+                "min" : null
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Current_DC4",
+            "name" : "Current_DC4",
+            "type" : "number",
+            "unit" : "ampe",
+            "enable" : true,
+            "threshold" : {
+                "max" : null,
+                "min" : null
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Current_AC5",
+            "name" : "Dòng điện AC Điều hòa 1",
+            "type" : "number",
+            "unit" : "ampe",
+            "enable" : true,
+            "threshold" : {
+                "max" : "50",
+                "min" : "10"
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Current_AC3P2",
+            "name" : "Dòng điện 3 pha Máy phát",
+            "type" : "number",
+            "unit" : "ampe",
+            "enable" : true,
+            "threshold" : {
+                "max" : "50",
+                "min" : "10"
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Current_AC4",
+            "name" : "Dòng điện AC Tủ 2",
+            "type" : "number",
+            "unit" : "ampe",
+            "enable" : true,
+            "threshold" : {
+                "max" : "50",
+                "min" : "10"
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Current_DC3",
+            "name" : "Current_DC3",
+            "type" : "number",
+            "unit" : "ampe",
+            "enable" : true,
+            "threshold" : {
+                "max" : null,
+                "min" : null
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Current_AC2",
+            "name" : "Dòng AC máy nổ",
+            "type" : "number",
+            "unit" : "ampe",
+            "enable" : true,
+            "threshold" : {
+                "max" : "50",
+                "min" : "10"
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Current_DC2",
+            "name" : "Current_DC2",
+            "type" : "number",
+            "unit" : "ampe",
+            "enable" : true,
+            "threshold" : {
+                "max" : null,
+                "min" : null
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Current_AC6",
+            "name" : "Dòng điện AC Điều hòa 2",
+            "type" : "number",
+            "unit" : "ampe",
+            "enable" : true,
+            "threshold" : {
+                "max" : "50",
+                "min" : "10"
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Current_DC",
+            "name" : "Current_DC",
+            "type" : "number",
+            "unit" : "ampe",
+            "enable" : true,
+            "threshold" : {
+                "max" : null,
+                "min" : null
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Current_AC",
+            "name" : "Dòng AC điện lưới",
+            "type" : "number",
+            "unit" : "ampe",
+            "enable" : true,
+            "threshold" : {
+                "max" : "0",
+                "min" : "0"
+            },
+            "value" : "1.8",
+            "valueDisplay" : "1.8",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Current_AC3",
+            "name" : "Dòng điện AC Tủ 1",
+            "type" : "number",
+            "unit" : "ampe",
+            "enable" : true,
+            "threshold" : {
+                "max" : "0",
+                "min" : "0"
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "TempC1_SHT",
+            "name" : "Nhiệt độ phòng",
+            "type" : "number",
+            "unit" : "degree",
+            "enable" : true,
+            "threshold" : {
+                "min" : 19.0,
+                "max" : 40.0
+            },
+            "value" : "22.47",
+            "valueDisplay" : "22.47",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "TempC2_SHT",
+            "name" : "Nhiệt độ ngoài trời",
+            "type" : "number",
+            "unit" : "degree",
+            "enable" : true,
+            "threshold" : {
+                "max" : null,
+                "min" : null
+            },
+            "value" : "22.51",
+            "valueDisplay" : "22.51",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "DH2_temp",
+            "name" : "DH2_temp",
+            "type" : "number",
+            "unit" : "degree",
+            "enable" : true,
+            "threshold" : null,
+            "value" : "20",
+            "valueDisplay" : "20",
+            "state" : "normal",
+            "controllable" : true
+        },
+        {
+            "id" : "DH1_temp",
+            "name" : "DH1_temp",
+            "type" : "number",
+            "unit" : "degree",
+            "enable" : true,
+            "threshold" : null,
+            "value" : "20",
+            "valueDisplay" : "20",
+            "state" : "normal",
+            "controllable" : true
+        },
+        {
+            "id" : "Frequency_AC2",
+            "name" : "Tần số AC máy nổ",
+            "type" : "number",
+            "unit" : "hz",
+            "enable" : true,
+            "threshold" : {
+                "max" : "50",
+                "min" : "10"
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Frequency_AC3P1",
+            "name" : "Tần số 3 pha Điện lưới",
+            "type" : "number",
+            "unit" : "hz",
+            "enable" : true,
+            "threshold" : {
+                "max" : "50",
+                "min" : "10"
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Frequency_AC",
+            "name" : "Tần số AC điện lưới",
+            "type" : "number",
+            "unit" : "hz",
+            "enable" : true,
+            "threshold" : {
+                "max" : "0",
+                "min" : "0"
+            },
+            "value" : "50.0",
+            "valueDisplay" : "50.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Frequency_AC3",
+            "name" : "Tần số AC Tủ 1",
+            "type" : "number",
+            "unit" : "hz",
+            "enable" : true,
+            "threshold" : {
+                "max" : "0",
+                "min" : "0"
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Frequency_AC6",
+            "name" : "Frequency_AC6",
+            "type" : "number",
+            "unit" : "hz",
+            "enable" : true,
+            "threshold" : {
+                "max" : null,
+                "min" : null
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Frequency_AC4",
+            "name" : "Tần số AC Tủ 2",
+            "type" : "number",
+            "unit" : "hz",
+            "enable" : true,
+            "threshold" : {
+                "max" : "50",
+                "min" : "10"
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Frequency_AC3P2",
+            "name" : "Tần số 3 pha Máy phát",
+            "type" : "number",
+            "unit" : "hz",
+            "enable" : true,
+            "threshold" : {
+                "max" : null,
+                "min" : null
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Frequency_AC5",
+            "name" : "Tần số AC Điều hòa 1",
+            "type" : "number",
+            "unit" : "hz",
+            "enable" : true,
+            "threshold" : {
+                "max" : "50",
+                "min" : "10"
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Oil_status",
+            "name" : "Mức xăng dầu",
+            "type" : "number",
+            "unit" : "number",
+            "enable" : true,
+            "threshold" : {
+                "max" : null,
+                "min" : null
+            },
+            "value" : "43",
+            "valueDisplay" : "43",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Phase_AC3P1",
+            "name" : "Pha Điện lưới",
+            "type" : "number",
+            "unit" : "percent",
+            "enable" : true,
+            "threshold" : {
+                "max" : "50",
+                "min" : "10"
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Hum1_SHT",
+            "name" : "Độ ẩm phòng",
+            "type" : "number",
+            "unit" : "percent",
+            "enable" : true,
+            "threshold" : {
+                "max" : null,
+                "min" : null
+            },
+            "value" : "85.34",
+            "valueDisplay" : "85.34",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Phase_AC3P2",
+            "name" : "Phase_AC3P2",
+            "type" : "number",
+            "unit" : "percent",
+            "enable" : true,
+            "threshold" : {
+                "max" : null,
+                "min" : null
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Hum2_SHT",
+            "name" : "Độ ẩm ngoài trời",
+            "type" : "number",
+            "unit" : "percent",
+            "enable" : true,
+            "threshold" : {
+                "max" : null,
+                "min" : null
+            },
+            "value" : "84.71",
+            "valueDisplay" : "84.71",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Vol_LN_AC3P1",
+            "name" : "Điện áp LN AC 3 pha Điện lưới",
+            "type" : "number",
+            "unit" : "volt",
+            "enable" : true,
+            "threshold" : {
+                "max" : "250",
+                "min" : "210"
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Voltage_DC3",
+            "name" : "Voltage_DC3",
+            "type" : "number",
+            "unit" : "volt",
+            "enable" : true,
+            "threshold" : {
+                "max" : null,
+                "min" : null
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Voltage_AC4",
+            "name" : "Điện áp AC Tủ 2",
+            "type" : "number",
+            "unit" : "volt",
+            "enable" : true,
+            "threshold" : {
+                "max" : "250",
+                "min" : "210"
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Vol_LN_AC3P2",
+            "name" : "Điện áp LN 3 pha Máy phát",
+            "type" : "number",
+            "unit" : "volt",
+            "enable" : true,
+            "threshold" : {
+                "max" : "250",
+                "min" : "210"
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Vol_LL_AC3P2",
+            "name" : "Điện áp LL 3 pha Máy phát",
+            "type" : "number",
+            "unit" : "volt",
+            "enable" : true,
+            "threshold" : {
+                "max" : "250",
+                "min" : "210"
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Voltage_AC6",
+            "name" : "Điện áp AC Điều hòa 2",
+            "type" : "number",
+            "unit" : "volt",
+            "enable" : true,
+            "threshold" : {
+                "max" : "250",
+                "min" : "210"
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Voltage_AC",
+            "name" : "Điện áp AC điện lưới",
+            "type" : "number",
+            "unit" : "volt",
+            "enable" : true,
+            "threshold" : {
+                "max" : "0",
+                "min" : "0"
+            },
+            "value" : "227.6",
+            "valueDisplay" : "227.6",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Voltage_AC3",
+            "name" : "Điện áp AC Tủ 1",
+            "type" : "number",
+            "unit" : "volt",
+            "enable" : true,
+            "threshold" : {
+                "max" : "250",
+                "min" : "210"
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Voltage_DC",
+            "name" : "Voltage_DC",
+            "type" : "number",
+            "unit" : "volt",
+            "enable" : true,
+            "threshold" : {
+                "max" : null,
+                "min" : null
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Voltage_AC5",
+            "name" : "Điện áp AC Điều hòa 1",
+            "type" : "number",
+            "unit" : "volt",
+            "enable" : true,
+            "threshold" : {
+                "max" : "250",
+                "min" : "210"
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Voltage_AC2",
+            "name" : "Điện áp AC máy nổ",
+            "type" : "number",
+            "unit" : "volt",
+            "enable" : true,
+            "threshold" : {
+                "max" : "250",
+                "min" : "210"
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Voltage_DC4",
+            "name" : "Voltage_DC4",
+            "type" : "number",
+            "unit" : "volt",
+            "enable" : true,
+            "threshold" : {
+                "max" : null,
+                "min" : null
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Vol_LL_AC3P1",
+            "name" : "Điện áp LL AC 3 pha Điện lưới",
+            "type" : "number",
+            "unit" : "volt",
+            "enable" : true,
+            "threshold" : {
+                "max" : "250",
+                "min" : "210"
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Voltage_DC2",
+            "name" : "Voltage_DC2",
+            "type" : "number",
+            "unit" : "volt",
+            "enable" : true,
+            "threshold" : {
+                "max" : null,
+                "min" : null
+            },
+            "value" : "0.0",
+            "valueDisplay" : "0.0",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "DH2_fan",
+            "name" : "DH2_fan",
+            "type" : "set",
+            "unit" : "asmf",
+            "enable" : true,
+            "threshold" : null,
+            "value" : "MEDIUM",
+            "valueDisplay" : "Vừa",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "DH1_fan",
+            "name" : "DH1_fan",
+            "type" : "set",
+            "unit" : "asmf",
+            "enable" : true,
+            "threshold" : null,
+            "value" : "MEDIUM",
+            "valueDisplay" : "Vừa",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "DH2_mode",
+            "name" : "DH2_mode",
+            "type" : "set",
+            "unit" : "cdf",
+            "enable" : true,
+            "threshold" : null,
+            "value" : "COOL",
+            "valueDisplay" : "Mát",
+            "state" : "normal",
+            "controllable" : true
+        },
+        {
+            "id" : "DH1_mode",
+            "name" : "DH1_mode",
+            "type" : "set",
+            "unit" : "cdf",
+            "enable" : true,
+            "threshold" : null,
+            "value" : "COOL",
+            "valueDisplay" : "Mát",
+            "state" : "normal",
+            "controllable" : true
+        },
+        {
+            "id" : "Smoke_status",
+            "name" : "Khói",
+            "type" : "set",
+            "unit" : "na",
+            "enable" : true,
+            "threshold" : null,
+            "value" : "NORMAL",
+            "valueDisplay" : "Bình thường",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Pir_status",
+            "name" : "Chuyển động",
+            "type" : "set",
+            "unit" : "na",
+            "enable" : true,
+            "threshold" : null,
+            "value" : "NORMAL",
+            "valueDisplay" : "Bình thường",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Water_status",
+            "name" : "Nước",
+            "type" : "set",
+            "unit" : "na",
+            "enable" : true,
+            "threshold" : null,
+            "value" : "NORMAL",
+            "valueDisplay" : "Bình thường",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Door1_status",
+            "name" : "Cửa phòng trạm",
+            "type" : "set",
+            "unit" : "oc",
+            "enable" : true,
+            "threshold" : null,
+            "value" : "OPEN",
+            "valueDisplay" : "Mở",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "Door2_status",
+            "name" : "Cửa máy phát",
+            "type" : "set",
+            "unit" : "oc",
+            "enable" : true,
+            "threshold" : null,
+            "value" : "OPEN",
+            "valueDisplay" : "Mở",
+            "state" : "normal",
+            "controllable" : false
+        },
+        {
+            "id" : "DH2_model",
+            "name" : "DH2_model",
+            "type" : "set",
+            "unit" : "unknown",
+            "enable" : true,
+            "threshold" : null,
+            "value" : "DAIKIN",
+            "valueDisplay" : "DAIKIN",
+            "state" : "normal",
+            "controllable" : true
+        },
+        {
+            "id" : "DH1_model",
+            "name" : "DH1_model",
+            "type" : "set",
+            "unit" : "unknown",
+            "enable" : true,
+            "threshold" : null,
+            "value" : "DAIKIN",
+            "valueDisplay" : "DAIKIN",
+            "state" : "normal",
+            "controllable" : true
+        }
+    ],
+    "basicParams" : {
+        "desc" : "Thiết bị giả, dùng để test",
+        "name" : "Thiết bị giả test direct",
+        "reportInterval" : NumberInt(1),
+        "offlineAlarm" : true,
+        "thresholdAlarm" : false,
+        "lowBatteryAlarm" : false
+    },
+    "groups" : [
+
+    ],
+    "shared" : [
+
+    ],
+    "remoteControlAdapterID" : "direct",
+    "setCustomNames" : {
+        "oc" : {
+            "OPEN" : "Mở",
+            "CLOSE" : "Đóng"
+        },
+        "na" : {
+            "NORMAL" : "Bình thường",
+            "ALARM" : "Kích hoạt"
+        },
+        "asmf" : {
+            "AUTO" : "Tự động",
+            "SLOW" : "Chậm",
+            "MEDIUM" : "Vừa",
+            "FAST" : "Nhanh"
+        },
+        "dl" : {
+            "DARK" : "Tối",
+            "LIGHT" : "Sáng"
+        },
+        "cdf" : {
+            "COOL" : "Mát",
+            "DRY" : "Khô",
+            "FANONLY" : "Chỉ có quạt"
+        }
+    },
+    "boolCustomNames" : {
+        "bool" : {
+            "ON" : "BẬT",
+            "OFF" : "TẮT"
+        }
+    },
+    "deviceListing" : {
+        "portLayout" : {
+            "mobile" : [
+                "Pir_status",
+                "Smoke_status",
+                "Water_status",
+                "Door1_status",
+                "TempC1_SHT",
+                "Door2_status",
+                "Hum1_SHT",
+                "Lamp_status",
+                "TempC2_SHT",
+                "Siren_status",
+                "Hum2_SHT",
+                "Fan_status"
+            ],
+            "web" : [
+                "Pir_status",
+                "Door1_status",
+                "Door2_status",
+                "Lamp_status",
+                "Smoke_status",
+                "TempC1_SHT",
+                "Hum1_SHT",
+                "Siren_status",
+                "Water_status",
+                "TempC2_SHT",
+                "Hum2_SHT",
+                "Fan_status"
+            ]
+        },
+        "fixColumns" : NumberInt(4)
+    },
+    "dashboard_layout" : {
+        "layout" : [
+            {
+                "row" : {
+                    "childs" : [
+                        {
+                            "col" : {
+                                "childs" : [
+                                    {
+                                        "row" : {
+                                            "childs" : [
+                                                "Pir_status",
+                                                "Water_status"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "row" : {
+                                            "childs" : [
+                                                "overal_status"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "row" : {
+                                            "childs" : [
+                                                "Siren_status",
+                                                "Lamp_status"
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "col" : {
+                                "childs" : [
+                                    "Smoke_status",
+                                    "TempC1_SHT",
+                                    "Fan_status"
+                                ]
+                            }
+                        },
+                        {
+                            "col" : {
+                                "childs" : [
+                                    {
+                                        "row" : {
+                                            "childs" : [
+                                                "Door1_status",
+                                                "Door2_status",
+                                                "Oil_status"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "row" : {
+                                            "childs" : [
+                                                "TempC2_SHT",
+                                                "Hum1_SHT",
+                                                "Hum2_SHT"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "group" : "AC1",
+                                        "childs" : [
+                                            "Voltage_AC",
+                                            "Current_AC",
+                                            "Frequency_AC"
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "col" : {
+                                "childs" : [
+                                    "clock_number",
+                                    "sub:DH1"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "row" : {
+                    "childs" : [
+                        {
+                            "col" : {
+                                "childs" : [
+                                    {
+                                        "group" : "AC2",
+                                        "childs" : [
+                                            "Voltage_AC2",
+                                            "Current_AC2",
+                                            "Frequency_AC2"
+                                        ]
+                                    },
+                                    {
+                                        "group" : "AC4",
+                                        "childs" : [
+                                            "Voltage_AC4",
+                                            "Current_AC4",
+                                            "Frequency_AC4"
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "col" : {
+                                "childs" : [
+                                    {
+                                        "group" : "AC3",
+                                        "childs" : [
+                                            "Voltage_AC3",
+                                            "Current_AC3",
+                                            "Frequency_AC3"
+                                        ]
+                                    },
+                                    {
+                                        "group" : "AC5",
+                                        "childs" : [
+                                            "Voltage_AC5",
+                                            "Current_AC5",
+                                            "Frequency_AC5"
+                                        ]
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "col" : {
+                                "childs" : [
+                                    "sub:DH2"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "row" : {
+                    "childs" : [
+                        {
+                            "group" : "AC6",
+                            "childs" : [
+                                "Voltage_AC6",
+                                "Current_AC6",
+                                "Frequency_AC6"
+                            ]
+                        },
+                        {
+                            "group" : "AC3P-1",
+                            "childs" : [
+                                "Vol_LN_AC3P1",
+                                "Vol_LL_AC3P1",
+                                "Current_AC3P1",
+                                "Frequency_AC3P1",
+                                "Phase_AC3P1"
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "row" : {
+                    "childs" : [
+                        {
+                            "group" : "AC3P-2",
+                            "childs" : [
+                                "Vol_LN_AC3P2",
+                                "Vol_LL_AC3P2",
+                                "Current_AC3P2",
+                                "Frequency_AC3P2",
+                                "Phase_AC3P2"
+                            ]
+                        }
+                    ]
+                }
+            },
+            {
+                "row" : {
+                    "childs" : [
+                        {
+                            "group" : "DC1",
+                            "childs" : [
+                                "Voltage_DC",
+                                "Current_DC"
+                            ]
+                        },
+                        {
+                            "group" : "DC2",
+                            "childs" : [
+                                "Voltage_DC2",
+                                "Current_DC2"
+                            ]
+                        },
+                        {
+                            "group" : "DC3",
+                            "childs" : [
+                                "Voltage_DC3",
+                                "Current_DC3"
+                            ]
+                        },
+                        {
+                            "group" : "DC4",
+                            "childs" : [
+                                "Voltage_DC4",
+                                "Current_DC4"
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "dashboard_enabled" : true,
+    "location" : {
+        "lat" : 21.00678885513322,
+        "lng" : 105.79855307936668
+    },
+    "deleted" : false,
+    "owner_id" : "dev.master",
+    "source" : "direct",
+    "attributes" : {
+
+    },
+    "deviceInterface" : {
+        "portLayout" : {
+            "mobile" : [
+                "Pir_status",
+                "Smoke_status",
+                "Water_status",
+                "Door1_status",
+                "Door2_status",
+                "Oil_status",
+                "TempC1_SHT",
+                "Hum1_SHT",
+                "TempC2_SHT",
+                "Hum2_SHT",
+                "Siren_status",
+                "Lamp_status",
+                "Fan_status",
+                "Voltage_AC",
+                "Current_AC",
+                "Frequency_AC",
+                "Voltage_AC2",
+                "Current_AC2",
+                "Frequency_AC2",
+                "Voltage_AC3",
+                "Current_AC3",
+                "Frequency_AC3",
+                "Voltage_AC4",
+                "Current_AC4",
+                "Frequency_AC4",
+                "Voltage_AC5",
+                "Current_AC5",
+                "Frequency_AC5",
+                "Voltage_AC6",
+                "Current_AC6",
+                "Frequency_AC6  ",
+                "Vol_LN_AC3P1",
+                "Vol_LL_AC3P1",
+                "Current_AC3P1",
+                "Frequency_AC3P1",
+                "Phase_AC3P1",
+                "Vol_LN_AC3P2",
+                "Vol_LL_AC3P2",
+                "Current_AC3P2",
+                "Frequency_AC3P2",
+                "Phase_AC3P2 ",
+                "Voltage_DC",
+                "Current_DC",
+                "Voltage_DC2",
+                "Current_DC2",
+                "Voltage_DC3",
+                "Current_DC3",
+                "Voltage_DC4",
+                "Current_DC4"
+            ],
+            "web" : [
+                "Pir_status",
+                "Smoke_status",
+                "Water_status",
+                "Door1_status",
+                "Door2_status",
+                "Oil_status",
+                "TempC1_SHT",
+                "Hum1_SHT",
+                "TempC2_SHT",
+                "Hum2_SHT",
+                "Siren_status",
+                "Lamp_status",
+                "Fan_status",
+                "Voltage_AC",
+                "Current_AC",
+                "Frequency_AC",
+                "Voltage_AC2",
+                "Current_AC2",
+                "Frequency_AC2",
+                "Voltage_AC3",
+                "Current_AC3",
+                "Frequency_AC3",
+                "Voltage_AC4",
+                "Current_AC4",
+                "Frequency_AC4",
+                "Voltage_AC5",
+                "Current_AC5",
+                "Frequency_AC5",
+                "Voltage_AC6",
+                "Current_AC6",
+                "Frequency_AC6  ",
+                "Vol_LN_AC3P1",
+                "Vol_LL_AC3P1",
+                "Current_AC3P1",
+                "Frequency_AC3P1",
+                "Phase_AC3P1",
+                "Vol_LN_AC3P2",
+                "Vol_LL_AC3P2",
+                "Current_AC3P2",
+                "Frequency_AC3P2",
+                "Phase_AC3P2 ",
+                "Voltage_DC",
+                "Current_DC",
+                "Voltage_DC2",
+                "Current_DC2",
+                "Voltage_DC3",
+                "Current_DC3",
+                "Voltage_DC4",
+                "Current_DC4"
+            ]
+        }
+    },
+    "subDevices" : [
+        {
+            "name" : "Điều hòa 1",
+            "type" : "air-conditioner",
+            "id" : "DH1"
+        },
+        {
+            "name" : "Điều hòa 2",
+            "type" : "air-conditioner",
+            "id" : "DH2"
+        }
+    ],
+    "chartGroups" : [
+        {
+            "ports" : [
+                "TempC1_SHT",
+                "TempC2_SHT",
+                "Hum1_SHT",
+                "Hum2_SHT",
+                "Oil_status"
+            ],
+            "groupTitle" : "Nhiệt độ, độ ẩm, mức xăng dầu",
+            "id" : "temp-humid-oil",
+            "dataType" : "time_series"
+        },
+        {
+            "ports" : [
+                "Voltage_AC",
+                "Voltage_AC2",
+                "Voltage_AC3",
+                "Voltage_AC4",
+                "Voltage_AC5",
+                "Voltage_AC6"
+            ],
+            "groupTitle" : "Điện áp AC",
+            "id" : "voltage-ac",
+            "dataType" : "time_series"
+        },
+        {
+            "ports" : [
+                "Current_AC",
+                "Current_AC2",
+                "Current_AC3",
+                "Current_AC4",
+                "Current_AC5",
+                "Current_AC6"
+            ],
+            "groupTitle" : "Dòng AC",
+            "id" : "current-ac",
+            "dataType" : "time_series"
+        },
+        {
+            "ports" : [
+                "Frequency_AC",
+                "Frequency_AC2",
+                "Frequency_AC3",
+                "Frequency_AC4",
+                "Frequency_AC5",
+                "Frequency_AC6"
+            ],
+            "groupTitle" : "Tần số AC",
+            "id" : "frequency-ac",
+            "dataType" : "time_series"
+        },
+        {
+            "ports" : [
+                "Vol_LN_AC3P1",
+                "Vol_LL_AC3P1",
+                "Current_AC3P1",
+                "Frequency_AC3P1",
+                "Phase_AC3P1",
+                "Vol_LN_AC3P2",
+                "Vol_LL_AC3P2",
+                "Current_AC3P2",
+                "Frequency_AC3P2",
+                "Phase_AC3P2"
+            ],
+            "groupTitle" : "Điện áp 3 Pha",
+            "id" : "voltage-3p",
+            "dataType" : "time_series"
+        },
+        {
+            "ports" : [
+                "Voltage_DC",
+                "Current_DC",
+                "Voltage_DC2",
+                "Current_DC2",
+                "Voltage_DC3",
+                "Current_DC3",
+                "Voltage_DC4",
+                "Current_DC4"
+            ],
+            "groupTitle" : "Điện áp DC",
+            "id" : "voltage-dc",
+            "dataType" : "time_series"
+        },
+        {
+            "ports" : [
+                "Siren_status",
+                "Lamp_status",
+                "Fan_status",
+                "Pir_status",
+                "Smoke_status",
+                "Water_status",
+                "Door1_status",
+                "Door2_status"
+            ],
+            "groupTitle" : "Bật / tắt",
+            "id" : "5560d461477d42d1b4a098d63ee89515",
+            "dataType" : "switch_event"
+        }
+    ],
+    "supportResetDeviceCommand" : false,
+    "cameras" : [
+
+    ]
+}

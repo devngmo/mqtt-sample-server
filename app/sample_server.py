@@ -5,30 +5,34 @@ import paho.mqtt.client as paho
 import paho.mqtt.publish as publish
 import json, os, utils, time, math
 from munch import Munch
+from scheduler import PublishScheduler
 
 class SampleServer():
-    def __init__(self, host, port, username, password, publishRate):
+    def __init__(self, host, port, username, password, scenarioEndWillCloseServer = False):
         self.host = host
         self.port = port
         self.username = username
         self.password = password
-        self.publishRate = publishRate
         self.keepAlive=60
+        self.scheduler : PublishScheduler = None
+        self.client = paho.Client(protocol=paho.MQTTv311)
+        self.scenarioEndWillCloseServer = scenarioEndWillCloseServer
 
     def on_connect(self, client, userdata, flags, rc):
         print("Connected with result code "+str(rc))
         client.subscribe("dev/sample-server-config")
 
     def on_message(self, client, userdata, message):
-        try:
-            if message.topic == "dev/sample-server-config":
-                payloadStr = str(message.payload.decode("utf-8"))
-                jsonModel = json.loads(payloadStr)
-                if 'PUBLISH_RATE' in jsonModel:
-                    self.publishRate = jsonModel['PUBLISH_RATE']
+        # try:
+        #     if message.topic == "dev/sample-server-config":
+        #         payloadStr = str(message.payload.decode("utf-8"))
+        #         jsonModel = json.loads(payloadStr)
+        #         if 'PUBLISH_RATE' in jsonModel:
+        #             self.publishRate = jsonModel['PUBLISH_RATE']
 
-        except Exception as ex:
-            print(ex)
+        # except Exception as ex:
+        #     print(ex)
+        pass
         
     def on_log(self, client, userdata, level, buf):
         print('log: ', buf)
@@ -39,39 +43,52 @@ class SampleServer():
             data[p] = random.randint(10, 50)
         return data
         
+    def useScenario(self, scenarioFileName: str):
+        scenario = utils.loadYaml(f".\\scenarios\\{scenarioFileName}.yml")
+        print(f"[SERVER] run with scenario: {scenario['title']}")
+        self.scheduler = PublishScheduler(self.client, scenario)
+
     def go(self):
-        client = paho.Client(protocol=paho.MQTTv311)
-        client.on_connect = self.on_connect
-        client.on_message = self.on_message
-        client.on_log = self.on_log
+        self.client.on_connect = self.on_connect
+        self.client.on_message = self.on_message
+        self.client.on_log = self.on_log
     
         if self.username != '' and self.password != '':
             print('Auth: username="%s" password="%s"' % (self.username, self.password))
-            client.username_pw_set( username=self.username, password=self.password)
+            self.client.username_pw_set( username=self.username, password=self.password)
             
         else:
             print('Auth: anonymous')
 
         print('Connect to: host %s:%s...' % (self.host, self.port))
-        client.connect(self.host, self.port, self.keepAlive)
+        self.client.connect(self.host, self.port, self.keepAlive)
 
-        tempSensor = Munch(device_id = 'TS01', params=['TEMP'])
-        lightSensor = Munch(device_id = 'LS01', params=['BRIGHTNESS'])
-        ttsA = Munch(device_id = 'a', platform='tts')
-        devices = [ tempSensor, lightSensor ]
+        # tempSensor = Munch(device_id = 'TS01', params=['TEMP'])
+        # lightSensor = Munch(device_id = 'LS01', params=['BRIGHTNESS'])
+        # ttsA = Munch(device_id = 'a', platform='tts')
+        # devices = [ tempSensor, lightSensor ]
 
-        print('Publish counter text message to topic: dev/test')
-        print('Publish device data JSON to topic: iot/office')
+        # print('Publish counter text message to topic: dev/test')
+        # print('Publish device data JSON to topic: iot/office')
 
-        counter = 1
-        client.loop_start()
+        DELAY_INTERVAL_SECONDS = 0.1
+        self.client.loop_start()
+
         while True:
-            if client.is_connected():
-                client.publish('dev/test', payload= 'counter %d' % counter)
-                for d in devices:
-                    client.publish('iot/office', payload= json.dumps(self.generateSampleDeviceData(d)))
-                counter = counter + 1
-                time.sleep(self.publishRate)
+            if self.client.is_connected():
+                if self.scheduler != None:
+                    scenarioEnded = self.scheduler.update(DELAY_INTERVAL_SECONDS * 1000)
+                    if scenarioEnded:
+                        if self.scenarioEndWillCloseServer:
+                            print('----------------------------')
+                            print('Scenario ended => Close server')
+                            self.client.loop_stop()
+                            break
+                        else:
+                            print('Scenario ended but server still running')
+                else:
+                    print("ERROR: Scheduler is not created yet!")
+                time.sleep(DELAY_INTERVAL_SECONDS)
             else:
-                time.sleep(1)
-
+                time.sleep(0.1)
+                print('xxx')

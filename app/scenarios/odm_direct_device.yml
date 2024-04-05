@@ -1,0 +1,11 @@
+title: send a normal message from device [ddtest] each minute, repeat 10 times
+schedule:
+  - type: loop_publish
+    counter: 1000
+    device: ddtest
+    sample: normal
+    topic: direct/device/ddtest/uplink
+    delay: 200000 # millisec
+
+  
+  

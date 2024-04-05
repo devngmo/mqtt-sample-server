@@ -1,5 +1,5 @@
 import datetime
-import random
+import random, argparse
 import paho.mqtt.client as paho
 import paho.mqtt.publish as publish
 import json, os, utils, time, math
@@ -14,9 +14,14 @@ host = utils.getEnvValue('MQTT_HOST', '127.0.0.1')
 port = int(utils.getEnvValue('MQTT_PORT', '1883'))
 username = utils.getEnvValue('MQTT_USER', '')
 password = utils.getEnvValue('MQTT_PASS', '')
-publishRate = utils.getEnvValue('PUBLISH_RATE', 30)
 
-print('send { PUBLISH_RATE: 30 } to topic dev/sample-server-config to change publish rate')
+parser = argparse.ArgumentParser(description='Parse options in command-line')
+parser.add_argument('-s', '--scenario', help='Scenario file name in folder .\scenarios')
+parser.add_argument('-secs', '--scenarioEndWillCloseServer', help='yes/no')
+args = parser.parse_args()
+
 print('----------------------------------------------------------------------------------')
-server = SampleServer(host, port, username, password, publishRate)
+scenarioEndWillCloseServer = args.scenarioEndWillCloseServer == 'yes'
+server = SampleServer(host, port, username, password, scenarioEndWillCloseServer)
+server.useScenario(args.scenario)
 server.go()
